@@ -149,16 +149,13 @@ main {
   }
   @media screen and (max-width: $breakpoint-mobile) {
     width: 80%;
-
-    p {
-      font-size: 14px;
-    }
   }
 
   a {
     display    : block;
     margin     : 10px auto;
     font-weight: bold;
+    font-size  : 18px;
   }
 }
 
