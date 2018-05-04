@@ -13,20 +13,20 @@ $breakpoint-laptop: 900px;
  the short form 'font:' declaration was cauing issues with cross-browser compatability **edge** so it isn't used
  */
 body {
-  display       : flex;
+  display: flex;
   flex-direction: column;
-  min-height    : 100vh;
-  background    : $white-background;
-  max-width     : $breakpoint-laptop;
-  font-family   : "Roboto", sans-serif;
-  color         : $text-color-dark;
-  margin        : 0 auto;
+  min-height: 100vh;
+  background: $white-background;
+  max-width: $breakpoint-laptop;
+  font-family: "Roboto", sans-serif;
+  color: $text-color-dark;
+  margin: 0 auto;
 }
 
 a {
-  color          : inherit;
+  color: inherit;
   text-decoration: none;
-  transition     : 0.15s;
+  transition: 0.15s;
 
   &:hover {
     color: $accent-color;
@@ -34,37 +34,40 @@ a {
 }
 
 header {
-  display        : flex;
+  display: flex;
   justify-content: space-between;
-  align-items    : center;
-  border-bottom  : 3px solid $accent-color;
-  padding        : 10px;
-  margin-bottom  : 20px;
+  align-items: center;
+  border-bottom: 3px solid $accent-color;
+  padding: 10px;
+  margin-bottom: 20px;
+  // i wonted the header to look different on smaller screens
   @media screen and (max-width: $breakpoint-laptop) {
     background: $dark-background;
-    color     : $text-color-light;
+    color: $text-color-light;
   }
 
   .logo {
-    width     : 80px;
-    height    : 80px;
+    width: 80px;
+    height: 80px;
     transition: 0.1s;
+    //shrink logo on phones
     @media screen and (max-width: $breakpoint-mobile) {
-      width : 45px;
+      width: 45px;
       height: 45px;
     }
   }
 }
+//wrapper to hold the text as a single flex item in the header
 
 .name-wrap {
-  text-align    : right;
+  text-align: right;
   text-transform: uppercase;
 
   h1 {
     font-weight: 300;
-    font-size  : 45px;
-    margin     : 0;
-    transition : 0.1s;
+    font-size: 45px;
+    margin: 0;
+    transition: 0.1s;
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: 30px;
     }
@@ -72,21 +75,22 @@ header {
 
   h2 {
     font-weight: 400;
-    font-size  : 20px;
-    margin     : 0;
-    transition : 0.1s;
+    font-size: 20px;
+    margin: 0;
+    transition: 0.1s;
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: 16px;
     }
   }
 }
+//flex set to 1 for sticky footer purposes
 
 main {
   flex: 1;
 }
 
 .hero-image {
-  width : 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -95,52 +99,53 @@ main {
 }
 
 .projects-container {
-  display        : flex;
+  display: flex;
   justify-content: space-between;
-  align-items    : flex-start;
-  flex-wrap      : wrap;
+  align-items: flex-start;
+  flex-wrap: wrap;
   @media screen and (max-width: $breakpoint-laptop) {
     padding: 0 5%;
   }
+  //change projects layout to vertical on small screens
   @media screen and (max-width: $breakpoint-mobile) {
-    flex-direction : column;
+    flex-direction: column;
     justify-content: center;
-    align-items    : center;
-    text-align     : center;
+    align-items: center;
+    text-align: center;
   }
 
   h3 {
-    color      : lighten($text-color-dark, 20%);
+    color: lighten($text-color-dark, 20%);
     font-weight: 300;
-    font-size  : 28px;
+    font-size: 28px;
   }
 }
 
 .project {
   text-align: center;
-  width     : 30%;
-  min-width : 200px;
-  height    : auto;
+  width: 30%;
+  min-width: 200px;
+  height: auto;
 
   img {
-    width : 100%;
+    width: 100%;
     height: auto;
   }
 
   h4 {
-    color         : $text-color-darker;
-    padding       : 5px 0;
-    font-weight   : 400;
-    margin        : 0;
+    color: $text-color-darker;
+    padding: 5px 0;
+    font-weight: 400;
+    margin: 0;
     text-transform: uppercase;
-    font-size     : 24px;
+    font-size: 24px;
   }
 
   p {
     margin: 0;
   }
   @media screen and (max-width: $breakpoint-tablet) {
-    width         : 45%;
+    width: 45%;
     padding-bottom: 10px;
 
     h4 {
@@ -152,38 +157,38 @@ main {
   }
 
   a {
-    display    : block;
-    margin     : 10px auto;
+    display: block;
+    margin: 10px auto;
     font-weight: bold;
-    font-size  : 18px;
+    font-size: 18px;
   }
 }
 
 footer {
-  display        : flex;
-  align-items    : center;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap      : wrap-reverse;
-  color          : $text-color-darker;
-  border-top     : 1px solid $accent-color;
-  margin-top     : 5px;
-  padding        : 10px 0;
+  flex-wrap: wrap-reverse;
+  color: $text-color-darker;
+  border-top: 1px solid $accent-color;
+  margin-top: 5px;
+  padding: 10px 0;
   @media screen and (max-width: $breakpoint-laptop) {
     border-top: 0;
     background: $dark-background;
-    color     : $text-color-light;
-    padding   : 10px;
+    color: $text-color-light;
+    padding: 10px;
   }
   @media screen and (max-width: $breakpoint-mobile) {
     justify-content: space-around;
-    font-size      : 14px;
-    padding        : 4px 30px;
-    flex-direction : column-reverse;
+    font-size: 14px;
+    padding: 4px 30px;
+    flex-direction: column-reverse;
   }
 
   a {
     font-weight: 300;
-    margin     : 5px;
+    margin: 5px;
   }
 
   .git-link {
